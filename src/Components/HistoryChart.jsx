@@ -55,8 +55,8 @@ const HistoryChart = () => {
         fill: true,
         label: id,
         data: coinChartData.map((val) => val.y),
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "rgb(248, 208, 208)",
+        backgroundColor: "rgba(199, 59, 59, 1)",
       },
     ],
   };

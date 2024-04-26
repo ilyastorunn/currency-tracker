@@ -24,8 +24,13 @@ const Markets = () => {
   }
 
   return (
-    <section className="mt-8">
-      <h1 className="text-2xl mb-2">Markets</h1>
+    <section className="mt-8 m-10">
+      <div className="grid grid-cols-4 sm:grid-cols-4 p-2 text-sm text-[#848E9C]">
+        <p>Name</p>
+        <p>Price</p>
+        <p>Change</p>
+        <p>Value</p>
+      </div>
       {response && response.map((coin) => <Coin key={coin.id} coin={coin} />)}
     </section>
   );

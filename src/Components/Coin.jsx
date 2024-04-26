@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 
 const Coin = ({ coin }) => {
   return (
-    <Link to={`/coin/${coin.id}`}>
-      <div className="grid grid-cols-3 sm:grid.cols-4 font-light p-2 rounded border-gray-200 border-b hover:bg-gray-200">
+    <Link to={`/coin/${coin.id}`} style={{ textDecoration: 'none' }}>
+      <div className="grid grid-cols-4 sm:grid.cols-4 font-light p-2 m-10">
         <div className="flex items-center gap-1 w-full">
-          <img className="w-6" src={coin.image} alt={coin.name} />
-          <p>{coin.name}</p>
-          <span className="text-xs">({coin.symbol})</span>
+          <img className="w-6 mr-1" src={coin.image} alt={coin.name} />
+          <p className="text-white text-xl">{coin.name}</p>
+          <span className="text-lg text-[#848E9C]">({coin.symbol})</span>
         </div>
-        <span className="w-full text-center">
+        <span className="w-full text-white text-xl">
           {currencyFormat(coin.current_price)}
         </span>
         <span
@@ -30,8 +30,9 @@ const Coin = ({ coin }) => {
           {coin.price_change_percentage_24h}
         </span>
         <div className="hidden sm:block">
-          <p className="font-semibold">Market Cap</p>
-          <span>{currencyFormat(coin.market_cap)}</span>
+          <span className="text-white text-xl">
+            {currencyFormat(coin.market_cap)}
+          </span>
         </div>
       </div>
     </Link>
