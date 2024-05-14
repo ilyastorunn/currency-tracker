@@ -33,7 +33,7 @@ import TrendingWidget from "./TrendingWidget";
 const HistoryChart = () => {
   const { id } = useParams();
   const { response } = useAxios(
-    `coins/${id}/market_chart?vs_currency=usd&days=7`
+    `coins/${id}/market_chart?vs_currency=usd&days=1`
   );
 
   if (!response) {
@@ -58,8 +58,8 @@ const HistoryChart = () => {
         fill: true,
         label: id,
         data: coinChartData.map((val) => val.y),
-        borderColor: "rgb(248, 208, 208)",
-        backgroundColor: "rgba(199, 59, 59, 1)",
+        borderColor: "rgb(50, 147, 224)",
+        backgroundColor: "rgba(12, 75, 136, 1)",
       },
     ],
   };
@@ -69,7 +69,7 @@ const HistoryChart = () => {
       <div className="flex w-[27.66218rem] h-[31rem] flex-col justify-center items-center shrink-0 bg-[#333340] rounded-xl">
         <Line options={options} data={data} />
       </div>
-      <div className="flex">
+      <div className="flex flex-col gap-5">
         <Converter />
         <TrendingWidget />
       </div>
