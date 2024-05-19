@@ -25,24 +25,35 @@ const TrendingWidget = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-8">
       <div className="converter flex flex-col items-center gap-4 bg-[#333340] rounded-xl ml-5 p-4">
-        <h3 className="text-[#D4DBCD] text-2xl">Trending</h3>
+        <h3 className="text-[#D4DBCD] text-2xl bg-[#333340]">Trending</h3>
         <div className="flex flex-col items-start px-4 py-3 rounded-[10px] bg-[#333340] w-full">
           {trendingCoins.map((coin) => (
-            <Link to={`/coin/${coin.item.id}`} key={coin.item.id} style={{ textDecoration: 'none' }}>
-              <div className="flex items-center justify-between border border-[#1E1E1E] rounded-[10px] p-2 bg-[#44445A] w-full mb-2">
-                <div className="flex items-center gap-1">
-                  <img className="w-6 mr-1" src={coin.item.small} alt={coin.item.name} />
-                  <p className="text-white text-xl">{coin.item.name}</p>
-                  <span className="text-lg text-[#848E9C]">({coin.item.symbol.toUpperCase()})</span>
+            <Link
+              className="bg-[#333340]"
+              to={`/coin/${coin.item.id}`}
+              key={coin.item.id}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="flex items-center justify-between border border-[#1E1E1E] rounded-[10px] p-2 bg-[#333340] w-full mb-2">
+                <div className="flex items-center gap-2 bg-[#333340]">
+                  <img
+                    className="w-6 mr-2 bg-[#333340]"
+                    src={coin.item.small}
+                    alt={coin.item.name}
+                  />
+                  <p className="text-white text-xl bg-[#333340]">{coin.item.name}</p>
+                  <span className="text-lg text-[#848E9C] bg-[#333340]">
+                    ({coin.item.symbol.toUpperCase()})
+                  </span>
                 </div>
-                <span className="text-white text-xl">
+                <span className="text-white text-xl bg-[#333340]">
                   {currencyFormat(coin.item.price_btc)}
                 </span>
                 <span
-                  className={`flex gap-1 ${
+                  className={`flex items-center gap-1 ${
                     coin.item.price_change_percentage_24h < 0
-                      ? 'text-red-400'
-                      : 'text-green-400'
+                      ? "text-red-400"
+                      : "text-green-400"
                   }`}
                 >
                   {coin.item.price_change_percentage_24h < 0 ? (
@@ -50,7 +61,7 @@ const TrendingWidget = () => {
                   ) : (
                     <TrendingUp />
                   )}
-                  {coin.item.price_change_percentage_24h}%
+                  {coin.item.price_change_percentage_24h}
                 </span>
               </div>
             </Link>

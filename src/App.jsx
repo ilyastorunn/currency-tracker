@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import CryptoDetail from "./Pages/CryptoDetail";
 import CryptoHome from "./Pages/CryptoHome";
+import Trending from "./Components/Trending";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<CryptoHome />} />
         <Route path="coin/:id" element={<CryptoDetail />} />
+        <Route path="trending" element={<Trending/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -29,6 +29,7 @@ import Skeleton from "./Skeleton";
 import Header from "./Header";
 import Converter from "./Converter";
 import TrendingWidget from "./TrendingWidget";
+import CoinDetail from "./CoinDetail";
 
 const HistoryChart = () => {
   const { id } = useParams();
@@ -65,13 +66,11 @@ const HistoryChart = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-      <div className="flex w-[27.66218rem] h-[31rem] flex-col justify-center items-center shrink-0 bg-[#333340] rounded-xl">
-        <Line options={options} data={data} />
-      </div>
-      <div className="flex flex-col gap-5">
-        <Converter />
-        <TrendingWidget />
+    <div className="flex justify-center items-center h-full">
+      <div className="w-full h-full flex flex-col justify-center items-center bg-[#333340] rounded-xl p-5">
+        <div className="w-full h-full flex justify-center items-center">
+          <Line options={options} data={data} />
+        </div>
       </div>
     </div>
   );
