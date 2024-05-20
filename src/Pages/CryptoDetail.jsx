@@ -6,17 +6,17 @@ import TrendingWidget from "../Components/TrendingWidget";
 
 const CryptoDetail = () => {
   return (
-    <div className="wrapper-container mt-10">
-      <div className="flex justify-center">
-        <div className="flex flex-col gap-5 flex-1">
+    <div className="wrapper-container mt-10 px-10 flex flex-col">
+      <div className="flex justify-center w-full">
+        <div className="flex flex-col gap-5 w-1/2 pr-5">
           <HistoryChart />
         </div>
-        <div className="flex flex-col gap-5 ml-10 flex-1">
+        <div className="flex flex-col gap-5 ml-10">
           <Converter />
           <TrendingWidget />
         </div>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 w-full flex justify-center">
         <CoinDetail />
       </div>
     </div>

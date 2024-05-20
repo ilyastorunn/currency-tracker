@@ -66,7 +66,7 @@ const HistoryChart = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="flex justify-center items-center h-full w-full">
       <div className="w-full h-full flex flex-col justify-center items-center bg-[#333340] rounded-xl p-5">
         <div className="w-full h-full flex justify-center items-center">
           <Line options={options} data={data} />
