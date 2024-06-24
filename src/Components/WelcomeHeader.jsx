@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../pics/logo.svg";
 
 function WelcomeHeader() {
