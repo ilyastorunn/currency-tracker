@@ -11,12 +11,12 @@ function WelcomeHeader() {
             <p className="text-base uppercase">Contact</p>
           </div>
           <div className="flex items-center gap-9">
-            <div className="flex items-center gap-2">
+            <a href="/login" className="flex items-center gap-2">
               <span className="material-symbols-outlined">fingerprint</span>
               <p className="text-base uppercase">Login</p>
-            </div>
+            </a>
             <div className="px-3.5 py-2 bg-indigo-900 rounded-[28px] justify-center items-center gap-2.5 inline-flex">
-              <button className="uppercase text-sm font-normal">Sign Up</button>
+              <a href="/signup" className="uppercase text-sm font-normal">Sign Up</a>
             </div>
           </div>
         </div>
