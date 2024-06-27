@@ -5,6 +5,7 @@ import CryptoDetail from "./Pages/CryptoDetail";
 import CryptoHome from "./Pages/CryptoHome";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
+import Contact from "./Pages/Contact";
 import Trending from "./Components/Trending";
 import Stock from "./Components/Stock";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="trending" element={<Trending/>} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
