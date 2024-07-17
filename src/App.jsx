@@ -9,6 +9,8 @@ import Contact from "./Pages/Contact";
 import PersonalHome from "./Pages/PersonalHome";
 import Trending from "./Components/Trending";
 import Stock from "./Components/Stock";
+// import News from "./Pages/News";
+import NewsList from "./Components/NewsList";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="signup" element={<SignUp />} />
         <Route path="contact" element={<Contact />} />
         <Route path="home" element={<PersonalHome />} />
+        {/* <Route path="news" element={<News />} /> */}
+        <Route path="newslist" element={<NewsList />} />
       </Routes>
     </BrowserRouter>
   );

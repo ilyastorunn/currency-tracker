@@ -1,4 +1,3 @@
-import React from "react";
 import useAxios from "../hooks/useAxios";
 import CoinTrending from "./CoinTrending";
 import Skeleton from "./Skeleton";
